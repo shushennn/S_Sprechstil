@@ -1,0 +1,56 @@
+{
+    "longer_than": 6,
+    "auxiliary_verbs": [],
+    "content_words_pos": ["ADJ", "ADJA", "ADJD", "CARD", "FM", "NOUN", "NE", "NN", "NNE", "NUM",
+			  "TRUNC", "VERB", "VVFIN", "VVIMP", "VVINF", "VVIZU", "VVPP"],
+    "verbs_pos": ["VERB", "VVFIN", "VVIMP", "VVINF", "VVIZU"],
+    "adjectives_pos": ["ADJ", "ADJA", "ADJD"],
+    "nouns_pos": ["NOUN", "PROPN", "NE", "NN", "NNE", "TRUNC"],
+    "numbers_pos": ["NUM", "CARD"],
+    "adverbs_pos": ["ADV"],
+    "prepositions_pos": ["APPR", "APPRART"],
+    "conjunctions_pos": ["CCONJ", "SCONJ", "KON", "KOUI", "KOUS"],
+    "sentence_complexity_pos": ["SCONJ", "KOUI", "KOUS", "PREL"],
+    "personal_pronouns_1s": ["ich", "mir", "mich"],
+    "personal_pronouns_1p": ["wir", "uns"],
+    "personal_pronouns_2s": ["du", "dir", "dich", "Sie", "sie", "Ihnen", "ihnen"],
+    "personal_pronouns_2p": ["ihr", "euch"],
+    "personal_pronouns_3s": ["er", "ihm", "ihn", "sie", "ihr"],
+    "personal_pronouns_3p": ["sie", "ihnen"],
+    "possessive_pronouns_1s": ["mein", "meine", "meins", "meinem",
+			       "meiner", "meines", "meinen"],
+    "possessive_pronouns_1p": ["unser", "unsere", "unseres", "unserem",
+			       "unseren", "unserer"],
+    "possessive_pronouns_2s": ["dein", "deine", "deines", "deins", "deinem", "deinen", "deiner", "ihr", "ihre", "ihrem", "ihren", "ihres", "Ihr",
+			       "Ihre", "Ihrem", "Ihren", "Ihres"],
+    "possessive_pronouns_2p": ["euer", "eure", "eures", "eurem", "euren",
+			       "eurer", "ihr", "ihre", "ihrem", "ihren", "ihres", "Ihr",
+			       "Ihre", "Ihrem", "Ihren", "Ihres"],
+    "possessive_pronouns_3s": ["sein", "ihr", "seine", "ihre", "seinem",
+			       "ihrem", "seiner", "ihrer", "seines", "ihres",
+			       "seinen", "ihren"],
+    "possessive_pronouns_3p": ["ihr", "ihre", "ihres", "ihrem", "ihren",
+			       "ihrer"],
+    "indefinite_pronouns": ["jemand", "jemanden", "jemandem", "niemand", "niemanden", "niemandem", "etwas", "einige", "einiger", "einigen", "einigem",
+			    "einiges", "irgendjemand", "irgendjemandem", "irgendjemanden", "irgendjemandes", "irgendein","irgendeine", "irgendeins",
+			    "irgendwo", "irgendwann", "irgendwas", "alles", "nichts", "jeder", "jedes", "jeden", "jedem", "jede", "manche",
+			    "alle", "aller", "allen", "allem", "mehrere", "mehreren", "etliche", "etlichen", "etliches"],
+    "quantifiers": ["viele", "sehr", "wenig", "häufig", "selten", "zahlreich", "kein", "keine", "ganz", "ziemlich", "völlig", "recht", "besonders", "absolut",
+                    "vollkommen", "einige", "mehere", "etliche", "sämtliche", "kaum", "fast"],
+    "assent": ["ok", "gut", "richtig", "super", "einverstanden", "ja", "stimmt"],
+    "negations": ["nein", "kein", "keine", "keines", "keins", "niemand",
+		  "nirgends", "nie", "nichts", "nicht", "nirgendwo", "niemals", "keinmal", "nimmermehr", "keineswegs"],
+    "map_pos": {
+	"PRON": {
+	    "tok": ["der", "die", "das", "dem", "den", "dessen", "deren", "welcher", "welche", "welches", "welchem", "welchen"],
+	    "tar": "PREL"
+	}
+    },
+    "ratios": {
+	"verb_noun": {
+	    "nom": "verbs",
+	    "denom": "nouns"
+	}
+    }
+}
+ 

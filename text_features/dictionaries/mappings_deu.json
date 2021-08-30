@@ -1,0 +1,18 @@
+{
+    "pos": {
+	"ADJ": "a",
+	"ADJA": "a",
+	"ADJD": "a",
+	"ADV": "r",
+	"NOUN": "n",
+	"PROPN": "n",
+	"NN": "n",
+	"NNE": "n",
+	"VERB": "v",
+	"VVFIN": "v",
+	"VVIMP": "v",
+	"VVINF": "v",
+	"VVIZU": "v",
+	"VVPP": "v"
+    }
+}

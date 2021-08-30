@@ -1,0 +1,19 @@
+{
+    "pos": {
+	"JJ": "a",
+        "JJR": "a",
+        "JJS": "a",
+	"NN": "n",
+	"NNS": "n",
+	"NNP": "n",
+        "VB": "v",
+	"VBD": "v",
+	"VBG": "v",
+	"VBN": "v",
+	"VBP": "v",
+	"VBZ": "v",
+	"RB": "r",
+	"RBR": "r",
+	"RBS": "r"
+    }
+}

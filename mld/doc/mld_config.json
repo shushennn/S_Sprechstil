@@ -1,0 +1,160 @@
+{
+    " ** pause/speech chunk parameters **",
+    "pause": {
+	"e_rel": 0.04,
+	"l": 0.155,
+	"l_ref": 5,
+	"n": -1,
+	"fbnd": 0,
+	"ons": 0,
+	"force_chunk": 0,
+        "min_pau_l": 0.4,
+	"min_chunk_l": 0.2,
+	"margin": 0,
+        "flt": {
+	    "btype": "low",
+	    "f": 8000,
+	    "ord": 5
+	}
+    },
+    " ** syllable nucleus extraction parameters **",
+    "syl": {
+        "e_rel": 1.02,
+        "e_val": 0.92,
+        "l": 0.05,
+        "l_ref": 0.15,
+        "d_min": 0.11,
+        "e_min": 0.13,
+        "flt": {
+            "f": [200,3000],
+            "btype": "band",
+            "ord": 5
+        }
+    },
+    " ** LLDs to be collected in syllable nuclei analysis windows.",
+    "    Those LLDs not found in openSmile table are ignored. **",
+    "col_lld": ["jitterLocal_sma",
+                "shimmerLocal_sma",
+                "logHNR_sma",
+                "pcm_zcr_sma",
+		"pcm_RMSenergy_sma",
+		
+		"pcm_fftMag_spectralCentroid_sma",
+		"pcm_fftMag_spectralEntropy_sma",
+		"pcm_fftMag_spectralVariance_sma",
+		"pcm_fftMag_spectralSkewness_sma",
+		"pcm_fftMag_spectralKurtosis_sma",
+		"pcm_fftMag_spectralSlope_sma",
+		"pcm_fftMag_psySharpness_sma",
+		"pcm_fftMag_spectralHarmonicity_sma"],
+    " ** columns from which to extract F0 and energy **",
+    "col_f0": "F0final_sma",
+    "col_energy": "pcm_RMSenergy_sma",
+    " ** F0 normalization: midline subtraction within each segment **",
+    "f0_nrm": "ml",
+    " ** truncate pause margins in VAD segments **",
+    "truncate": 1,
+    " ** standard (mean, var, skewness, kurtosis) or robust **",
+    " ** (median, iqr, q_skewness, q_kurtosis) summary statistics **",
+    "summaryStat": "robust",
+    " ** f0 preprocessing options **",
+    " ignore zeros, outlier factor and reference value, semitone conversion, ",
+    " semitone base value",
+    "preproc": {
+	"zi": 1,
+	"f": 3,
+	"m": "mean",
+	"st": 1,
+	"bv": 1
+    },
+    " ** analysis window for LLD extraction (centered on each",
+    "    syllable nucleus) **",
+    " can be specified separately for each LLD (as for spectral flux"
+    " right below). Default for all other LLDs: win", 
+    "lld": {
+	"pcm_fftMag_spectralFlux_sma": 0.11,
+	"win": 0.03
+    },
+    " ** cepstral spread and flux extraction parameters on syl ncl **",
+    "mld_vec": {
+	"win": 0.05,
+	"dist": "canberra",
+	"scale": 1,
+	"unit": "ncl"
+    },
+    " ** cepstral spread and flux extraction parameters between syl ncl **",
+    "mld_inter": {
+	"win": 0.1,
+	"dist": "canberra",
+	"scale": 1
+    },
+    " ** local F0 shape extraction parameters **",
+    "mld_shape": {
+	"win": 0.2,
+	"ord": 3,
+	"drop0": 0,
+	"rng": [-1, 1],
+	"register": "none",
+	"dist": "euclidean",
+	"scale": 1
+    },
+    " ** LSP dispersion extraction parameters **",
+    "mld_disp": {
+	"win": 0.05,
+	"unit": "ncl"
+    },
+    " ** synchronization between f0 and energy **",
+    "mld_corrDist": {
+	"win": 0.2,
+	"drop_zeroF0": 1,
+	"register": "none"
+    },
+    " ** spread and flux of per syllable sync between f0 and energy **",
+    "mld_align": {
+	"win": 0.2,
+	"drop_zeroF0": 1
+    },
+    " ** F0 register analysis parameters **",
+    "mld_register": {
+	"win": 0.1,
+	"bl": 5,
+	"tl": 95,
+	"rng": [0, 1]
+    },
+    " ** F0 variance ratio parameters **",
+    "mld_varRat": {
+	"win": 0.2,
+	"register": "none"
+    },
+    " ** F0 rhythm parameters **",
+    "mld_rhy_f0": {
+	"register": "none",
+	"wintyp": "kaiser",
+	"winparam": 1,
+	"nsm": 3,
+	"rmo": 1,
+	"lb": 0.0,
+	"ub": 8.0,
+	"rb": 1.0
+    },
+    " ** energy rhythm parameters **",
+    "mld_rhy_en": {
+	"register": "none",
+	"wintyp": "kaiser",
+	"winparam": 1,
+	"nsm": 3,
+	"rmo": 1,
+	"lb": 0.0,
+	"ub": 8.0,
+	"rb": 1.0
+    },
+    " ** within VAD pause params **",
+    "hld": {
+	"gap_margins": 1,
+	"gap_length": 0.5
+    },
+    " ** value by which NaNs are replaced in output dataframe **",
+    " omit this option if no replacement wanted. Zero is meaningful ",
+    " in most cases ",
+    "nan_replace": 0
+}

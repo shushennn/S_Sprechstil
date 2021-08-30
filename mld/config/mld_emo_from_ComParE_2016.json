@@ -1,0 +1,142 @@
+{
+    "opensmile": "ComParE_2016",
+    "pause": {
+	"e_rel": 0.04,
+	"l": 0.155,
+	"l_ref": 5,
+	"n": -1,
+	"fbnd": 0,
+	"ons": 0,
+	"force_chunk": 0,
+        "min_pau_l": 0.4,
+	"min_chunk_l": 0.2,
+	"margin": 0,
+        "flt": {
+	    "btype": "low",
+	    "f": 8000,
+	    "ord": 5
+	}
+    },
+    "syl": {
+        "e_rel": 1.02,
+        "e_val": 0.92,
+        "l": 0.05,
+        "l_ref": 0.15,
+        "d_min": 0.11,
+        "e_min": 0.13,
+        "flt": {
+            "f": [200,3000],
+            "btype": "band",
+            "ord": 5
+        }
+    },
+    "col_lld": ["voicingFinalUnclipped_sma",
+		"jitterLocal_sma",
+		"jitterDDP_sma",
+                "shimmerLocal_sma",
+                "logHNR_sma",
+                "pcm_zcr_sma",
+		"pcm_RMSenergy_sma",
+		"F0final_sma",
+		"pcm_fftMag_spectralRollOff25.0_sma",
+		"pcm_fftMag_spectralRollOff50.0_sma",
+		"pcm_fftMag_spectralRollOff75.0_sma",
+		"pcm_fftMag_spectralRollOff90.0_sma",
+		"pcm_fftMag_spectralFlux_sma",
+		"pcm_fftMag_spectralCentroid_sma",
+		"pcm_fftMag_spectralEntropy_sma",
+		"pcm_fftMag_spectralVariance_sma",
+		"pcm_fftMag_spectralSkewness_sma",
+		"pcm_fftMag_spectralKurtosis_sma",
+		"pcm_fftMag_spectralSlope_sma",
+		"pcm_fftMag_psySharpness_sma",
+		"pcm_fftMag_spectralHarmonicity_sma",
+		"mfcc_sma[1]","mfcc_sma[2]","mfcc_sma[3]"],
+    "col_f0": "F0final_sma",
+    "col_energy": "pcm_RMSenergy_sma",
+    "col_mld_vec": "audSpec",
+    "col_mld_voi": "voicingFinalUnclipped_sma",
+    "f0_nrm": "ml",
+    "truncate": 1,
+    "summaryStat": "robust",
+    "preproc": {
+	"zi": 1,
+	"f": 3,
+	"m": "mean",
+	"st": 1,
+	"bv": 1
+    },
+    "lld": {
+	"pcm_fftMag_spectralFlux_sma": 0.11,
+	"win": 0.03
+    },
+    "mld_vec": {
+	"win": 0.05,
+	"dist": "canberra",
+	"scale": 0,
+	"unit": "ncl"
+    },
+    "mld_inter": {
+	"win": 0.08,
+	"dist": "canberra",
+	"scale": 0
+    },
+    "mld_shape": {
+	"win": 0.2,
+	"ord": 3,
+	"drop0": 0,
+	"rng": [-1, 1],
+	"register": "none",
+	"dist": "euclidean",
+	"scale": 0
+    },
+    "mld_disp": {
+	"win": 0.05,
+	"unit": "ncl"
+    },
+    "mld_corrDist": {
+	"win": 0.2,
+	"drop_zeroF0": 1,
+	"register": "none"
+    },
+    "mld_align": {
+	"win": 0.2,
+	"register": "none"
+    },
+    "mld_register": {
+	"win": 0.1,
+	"bl": 5,
+	"tl": 95,
+	"rng": [0, 1]
+    },
+    "mld_voi": {
+	"win": 0.15
+    },
+    "mld_varRat": {
+	"win": 0.2,
+	"register": "none"
+    },
+    "mld_rhy_f0": {
+	"register": "none",
+	"wintyp": "kaiser",
+	"winparam": 1,
+	"rmo": 1,
+	"lb": 0.0,
+	"ub": 8.0,
+	"rb": 1.0
+    },
+    "mld_rhy_en": {
+	"register": "none",
+	"wintyp": "kaiser",
+	"winparam": 1,
+	"rmo": 1,
+	"lb": 0.0,
+	"ub": 8.0,
+	"rb": 1.0
+    },
+    "hld": {
+	"gap_margins": 1,
+	"gap_length": 0.5
+    },
+    "nan_replace": 0
+}
